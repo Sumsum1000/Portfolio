@@ -1,0 +1,296 @@
+body{
+    /* font-family: 'Noto Sans', sans-serif; */
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    background-color: rgb(139, 139, 139);
+}
+
+/*- - - - - - - - - - - - - - - - - - - -  Switch Box   - - - - - - - - - - - - - - - - - - - - */
+.electric_container{
+    position: absolute;
+    display: inline-block;
+    left: 6%;
+    top: 7%;
+    width: 100px;
+    height: 120px;
+}
+
+#light{
+    position: absolute;
+    height: 60%;
+    bottom: 0;
+}
+
+
+.switch-on{
+    position: absolute;
+    height: 100%;
+    right: 1%;
+    /* border: 10px solid black; */
+}
+
+.switch-off{
+    position: absolute;
+    height: 100%;
+    right: 1%;
+    top: 27%;
+    /* border: 10px solid black; */ 
+}
+
+#light-trigger{
+    width: 20px;
+    height: 50px;
+    /* border: 1px solid black; */
+    position: absolute;
+    left: 65%;
+    bottom: -45px;
+}
+
+
+
+
+/*- - - - - - - - - - - - - - - - - - - -   About   - - - - - - - - - - - - - - - - - - - - */
+
+
+.about-container{
+    width: 340px;
+    height: 60px;
+    position: absolute;
+    display: inline-block;
+    /* right: 290px; */
+    left: 69%;
+    top: -17%;
+    background-color: rgb(139, 139, 139);
+}
+
+.about-me{
+    display: inline-block;
+    height: 54px;
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+    font-size: 350%;
+    color: white;
+}
+
+.me-container{
+    margin-left: 50px;
+}
+
+#m{
+    background-color: yellow;
+    color: rgb(139, 139, 139);
+}
+
+.m-start{
+    transform: translateY(100px);
+}
+
+.m-up{
+    animation: m-up 1.8s ease-in forwards;
+}
+
+@keyframes m-up{
+    0%{ transform: translateY(100px)}
+    100% { transform: translateY(0px)}
+}
+
+.up-down-anim {
+    animation: up-and-down ease-in 2s;
+}
+
+@keyframes up-and-down {
+    0% { transform: translateY(0px) }
+    20% { transform: translateY(124px) }
+    30% { transform: translateY(124px) }
+    100% { transform: translateY(0px) }
+}
+
+
+/*- - - - - - - - - - - - - - - - - - - -  Content  - - - - - - - - - - - - - - - - - - - - */
+.content-container{
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    left: 25%;
+    top: 10.5%;
+    display: inline-block;
+    z-index: 2;
+}
+
+.content{
+    position: absolute;
+    width: 100%;
+    font-size: 150%;
+    color: white;
+    display: inline-block;
+    /* background-color: yellowgreen; */
+}
+
+.content-down{
+    animation-name: content-down;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content-down{
+    from{
+        transform: translateY(0px)
+    }
+
+    to {
+        transform: translateY(100px)
+    }
+}
+
+
+/*- - - - - - - - - - - - - - - - - - - -  Space ship   - - - - - - - - - - - - - - - - - - - -  */
+.space-ship-container{
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 80px;
+    height: 80px;
+    left: 420px;
+    top: 115px;
+    opacity: 0;
+    z-index: 5;
+}
+
+/* #space-ship{
+    width: 100%;
+    position: relative;
+} */
+
+
+.ship-opacity-anim{
+    animation: ship-opacity forwards 2s;
+               
+}
+
+.ship-sprite{
+    width: 100%;
+    position: relative;
+    animation: ship-idle ease-in forwards infinite 1.5s;
+}
+
+
+@keyframes ship-opacity{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes ship-idle{
+    0% { transform: translateY(0); }
+    25% { transform: translateY(5px); }
+    50% { transform: translateY(0px); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/*- - - - - - - - - - - - - - - - - - - -  Path   - - - - - - - - - - - - - - - - - - - -  */
+.path-container{
+    position: absolute;
+    width: 80%;
+    height: 91%;
+    right: 0;
+    top: 9%;
+    /* background-color: wheat; */
+}
+
+.path-horizontal{
+    position: absolute;
+    height: 120px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    display: inline-block;
+    border: 2px solid black;
+    /* background-color: yellowgreen; */
+}
+
+.path-vertical{
+    position: absolute;
+    width: 120px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    display: inline-block;
+    border: 2px solid black;
+    /* background-color: yellowgreen; */
+}
+
+.cover-right-up{
+    position: absolute;
+    width: 10px;
+    height: 120px;
+    top: 2px;
+    right: 120px;
+    z-index: 1;
+    /* background-color: yellowgreen; */
+    background-color: rgb(139, 139, 139);
+}
+
+.cover-right-down{
+    position: absolute;
+    width: 120px;
+    height: 10px;
+    top: 120px;
+    right: 1px;
+    z-index: 1;
+    /* background-color: yellowgreen; */
+    background-color: rgb(139, 139, 139);
+}
+
+.cover-left{
+    position: absolute;
+    top: 2px;
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+    /* background-color: yellowgreen; */
+    background-color: rgb(139, 139, 139);
+}
+
+/*- - - - - - - - - - - - - - - - - - - -   Collision    - - - - - - - - - - - - - - - - - - - -  */
+
+
+
+/*- - - - - - - - - - - - - - - - - - - -  Start battle   - - - - - - - - - - - - - - - - - - - -  */
+
+.ship-battle-start{
+    animation: ship-anim-battle-start 3s forwards;
+}
+
+@keyframes ship-anim-battle-start{
+    0%   {transform: translateX(1100px)}
+    20%  {transform: translateX(920px)}
+    40%  {transform: translateX(740px)}
+    60%  {transform: translateX(840px)}
+    80%  {transform: translateX(900px)}
+    100%  {transform: translateX(611px)}
+}
+
+/* 0%   {transform: translateX(1100px) ,translateY(750px)}
+    20%  {transform: translateX(920px) ,translateY(750px)}
+    40%  {transform: translateX(740px) ,translateY(720px)}
+    60%  {transform: translateX(840px) ,translateY(673px)}
+    80%  {transform: translateX(900px) ,translateY(747px)}
+    100%  {transform: translateX(611px) ,translateY(750px)} */
+
